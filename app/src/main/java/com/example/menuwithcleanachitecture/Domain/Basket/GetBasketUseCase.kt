@@ -6,6 +6,7 @@ class GetBasketUseCase(private val basketDishsListRepository: BasketDishsListRep
 
 //Выводит список блюд в корзине
     fun getBasketList(): List<DishsItem>{
+
         return basketDishsListRepository.getBasketList()
     }
 }
