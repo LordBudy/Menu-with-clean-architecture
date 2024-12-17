@@ -1,12 +1,12 @@
 package com.example.menuwithcleanachitecture.Domain.Basket
 
-import com.example.menuwithcleanachitecture.Domain.models.DishsItem
+import com.example.menuwithcleanachitecture.Domain.models.Dishs
 
-class GetBasketUseCase(private val basketDishsListRepository: BasketDishsListRepository) {
+class GetBasketUseCase(private val dishDao: BasketDao) {
 
-//Выводит список блюд в корзине
-    fun getBasketList(): List<DishsItem>{
+    //Выводит список блюд в корзине если есть если нет то просто пустой список
+    suspend fun getBasketList(): List<Dishs> {
 
-        return basketDishsListRepository.getBasketList()
+        return dishDao.getBasketList()
     }
 }

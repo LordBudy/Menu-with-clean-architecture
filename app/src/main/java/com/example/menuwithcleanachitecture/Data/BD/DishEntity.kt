@@ -12,7 +12,7 @@ data class DishEntity(
 var idAvto: Int? = null,
 
 @ColumnInfo(name = "id_dish")
-var id_dish: Int?,
+var id: Int?,
 
 @ColumnInfo(name = "url")
 var url_dish: String,
