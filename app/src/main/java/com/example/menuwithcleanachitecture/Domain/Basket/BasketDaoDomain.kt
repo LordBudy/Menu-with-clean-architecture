@@ -4,7 +4,7 @@ import com.example.menuwithcleanachitecture.Domain.models.Dishs
 
 
 //интерфейс -описывает методы которые будут использоваться для доступа к данным
-interface BasketDao {
+interface BasketDaoDomain {
     //Удаляет блюда из корзины по 1 если это последнее то
 //    удаляет позицию полностью
     fun minusDish(id: Dishs)

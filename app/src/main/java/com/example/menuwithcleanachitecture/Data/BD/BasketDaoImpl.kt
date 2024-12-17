@@ -1,8 +1,8 @@
 package com.example.menuwithcleanachitecture.Data.BD
 
-import com.example.menuwithcleanachitecture.Data.BasketDao
+import com.example.menuwithcleanachitecture.Data.BasketDaoData
 
-class BasketDaoImpl(private val basketDao: BasketDao) : BasketDao {
+class BasketDaoImpl(private val basketDao: BasketDaoData) : BasketDaoData {
 
     override suspend fun updateDish(dish: DishEntity) = basketDao.updateDish(dish)
     override suspend fun getAllDish(): List<DishEntity> = basketDao.getAllDish()

@@ -10,7 +10,7 @@ import com.example.menuwithcleanachitecture.Data.BD.DishEntity
 //DAO - это интерфейс, который определяет методы доступа
 // к данным (запросы, вставка, удаление, обновление)
 @Dao
-interface BasketDao {
+interface BasketDaoData {
         //  обновили
         @Update
         suspend fun updateDish(dish: DishEntity) // обновляет список блюд после каждого действия с бд
