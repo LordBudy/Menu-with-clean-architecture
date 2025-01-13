@@ -1,4 +1,4 @@
-package com.example.menuwithcleanachitecture.Data.BD
+package com.example.menuwithcleanachitecture.Data.db
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

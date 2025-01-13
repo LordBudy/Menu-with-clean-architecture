@@ -1,7 +1,7 @@
 package com.example.menuwithcleanachitecture.Domain.models
 
 //модель блюда
-data class DishsItem(
+data class DishItem(
     val id: Int,
     val url_dish: String,
     val name_dish: String,

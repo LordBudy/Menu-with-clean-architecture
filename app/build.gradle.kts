@@ -38,6 +38,7 @@ android {
 
 dependencies {
 
+    implementation("androidx.room:room-runtime:2.6.1")
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

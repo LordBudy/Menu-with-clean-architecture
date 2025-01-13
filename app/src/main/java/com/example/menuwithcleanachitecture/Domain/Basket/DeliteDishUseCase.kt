@@ -1,10 +1,10 @@
 package com.example.menuwithcleanachitecture.Domain.Basket
 
-import com.example.menuwithcleanachitecture.Domain.models.DishsItem
+import com.example.menuwithcleanachitecture.Domain.models.DishItem
 
 class DeliteDishUseCase(private val repository: BasketDishsListRepository) {
 
-    suspend fun execute(id: DishsItem){
+    suspend fun execute(id: Int): DishItem? {
         return repository.deliteDish(id)
     }
 }

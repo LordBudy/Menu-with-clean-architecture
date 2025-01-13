@@ -1,4 +1,4 @@
-package com.example.menuwithcleanachitecture.Data.BD
+package com.example.menuwithcleanachitecture.Data.db
 
 import androidx.room.*
 
@@ -13,15 +13,15 @@ interface BasketDao {
     suspend fun getAllBasket(): List<DishEntity>//выведет весь список в бд
 
     @Query("SELECT * FROM dishes WHERE id_dish = :dishId")//выведет одно блюдо по id
-    suspend fun getBasketDish(dishId:Int) : DishEntity?
+    suspend fun getBasketItem(dishId: Int) : DishEntity?
 
     @Update
     suspend fun updateBasket(dishes: DishEntity)//обновит бд
 
     @Delete
-    suspend fun deleteBasketAll(dishes: DishEntity)//удалит все из бд
+    suspend fun deleteBasketItem(dishes: DishEntity)//удалит все из бд
 
     @Query("DELETE FROM dishes WHERE id_dish = :dishId")//удалить один обьект из бд
-    suspend fun deleteBasketItem(dishId: Int) :DishEntity
+    suspend fun deleteBasketItem(dishId: Int)
 
 }
