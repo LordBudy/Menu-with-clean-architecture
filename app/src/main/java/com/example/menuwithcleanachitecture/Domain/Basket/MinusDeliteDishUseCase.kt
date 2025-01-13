@@ -1,11 +1,11 @@
 package com.example.menuwithcleanachitecture.Domain.Basket
 
-import com.example.menuwithcleanachitecture.Domain.models.DishsItem
+import com.example.menuwithcleanachitecture.Domain.models.DishItem
 
-class MinusDeliteDishUseCase(private val basketDishsListRepository: BasketDishsListRepository) {
+class MinusDeliteDishUseCase(private val repository: BasketDishsListRepository) {
 
-//   уменьшает на 1 или удаляет выбранное блюдо если количество меньше 1
-    fun minusDeliteDish(dishId: Int): DishsItem{
-        return basketDishsListRepository.minusDeliteDish(dishId)
+    //   уменьшает на 1 или удаляет выбранное блюдо если количество меньше 1
+    suspend fun execute(id: Int): DishItem {
+        return repository.minusDish(id)
     }
 }

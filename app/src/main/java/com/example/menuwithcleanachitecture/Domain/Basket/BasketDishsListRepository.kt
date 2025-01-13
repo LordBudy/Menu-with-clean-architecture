@@ -1,16 +1,22 @@
 package com.example.menuwithcleanachitecture.Domain.Basket
 
-import com.example.menuwithcleanachitecture.Domain.models.DishsItem
+import com.example.menuwithcleanachitecture.Domain.models.DishItem
 
 interface BasketDishsListRepository {
 
-    //Удаляет блюда из корзины по 1 если это последнее то
-//    удаляет позицию полностью
-    fun minusDeliteDish(dishId: Int): DishsItem
+    //Уменьшает количество блюд в корзине -1
+    suspend fun minusDish(id: Int): DishItem
 
-    //Прибавляет кол-во блюд в корзине
-    fun plusOneDish(dishId: Int): DishsItem
+    //Прибавляет кол-во блюд в корзине +1
+    suspend fun plusDish(id: Int): DishItem
 
-//Выводит список блюд в корзине если такие есть если нет то пустая страница
-    fun getBasketList(): List<DishsItem>
+    //Выводит список блюд в корзине если такие есть если нет
+    // то возвращает пустую страницу
+    suspend fun getAllDishes(): List<DishItem>
+
+    //удаляет позицию полностью если количество одного блюда <1
+    suspend fun deliteDish(id: Int): DishItem?
+
+    //обновляет весь список корзины
+ //   suspend fun updateDishes(dishItem: DishItem): List<DishItem>
 }
