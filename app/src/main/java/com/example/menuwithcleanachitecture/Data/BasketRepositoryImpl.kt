@@ -42,7 +42,7 @@ class BasketRepositoryImpl @Inject constructor(private val basketDao: BasketDao)
         basketDao.getAllBasket().map { it.toDishsItem() }
     }
 
-    override suspend fun deliteDish(id: Int): DishItem? = withContext(Dispatchers.IO){
+    override suspend fun deleteDish(id: Int): DishItem? = withContext(Dispatchers.IO){
         val basketEntity = basketDao.getBasketItem(id) ?: return@withContext null
         basketDao.deleteBasketItem(id)
         return@withContext basketEntity.toDishsItem()

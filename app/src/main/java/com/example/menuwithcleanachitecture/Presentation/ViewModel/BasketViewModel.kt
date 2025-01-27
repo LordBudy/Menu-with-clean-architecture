@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.menuwithcleanachitecture.Domain.Basket.DeliteDishUseCase
+import com.example.menuwithcleanachitecture.Domain.Basket.DeleteDishUseCase
 import com.example.menuwithcleanachitecture.Domain.Basket.GetAllDishesUseCase
 import com.example.menuwithcleanachitecture.Domain.Basket.MinusDishUseCase
 import com.example.menuwithcleanachitecture.Domain.Basket.PlusDishUseCase
@@ -18,7 +18,7 @@ import javax.inject.Inject
 class BasketViewModel @Inject constructor(
     //получаем все UseCase через конструктор
     private val getAllDishesUseCase: GetAllDishesUseCase,
-    private val deliteDishUseCase: DeliteDishUseCase,
+    private val deleteDishUseCase: DeleteDishUseCase,
     private val minusDishUseCase: MinusDishUseCase,
     private val plusDishUseCase: PlusDishUseCase,
     private val addDishUseCase: AddSaveDishToBasketUseCase
@@ -36,6 +36,33 @@ class BasketViewModel @Inject constructor(
             getAllDishesUseCase().observeForever {
                 _basketItems.value = it
             }
+        }
+    }
+    fun deleteDish(dishItem: DishItem) {
+        viewModelScope.launch {
+            deleteDishUseCase(dishItem)
+            getBasketItems() // Обновляем список после удаления
+        }
+    }
+
+    fun minusDish(dishItem: DishItem) {
+        viewModelScope.launch {
+            minusDishUseCase(dishItem)
+            getBasketItems() // Обновляем список после уменьшения количества
+        }
+    }
+
+    fun plusDish(dishItem: DishItem) {
+        viewModelScope.launch {
+            plusDishUseCase(dishItem)
+            getBasketItems() // Обновляем список после увеличения количества
+        }
+    }
+
+    fun addDish(dishItem: DishItem) {
+        viewModelScope.launch {
+            addDishUseCase(dishItem)
+            getBasketItems() // Обновляем список после добавления
         }
     }
 }

@@ -5,8 +5,8 @@ import com.example.menuwithcleanachitecture.Domain.models.DishItem
 
 class AddSaveDishToBasketUseCase(private val repository: BasketDishsListRepository) {
 
-    suspend fun addDishSave(id: Int) :DishItem{
-        return repository.addDishToBasket(id)
+    suspend operator fun invoke(dishItem: DishItem) :DishItem{
+        return repository.addDishToBasket(dishItem.id)
     }
 
 
