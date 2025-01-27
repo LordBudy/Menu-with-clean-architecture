@@ -1,6 +1,5 @@
 package com.example.menuwithcleanachitecture.Domain.Basket
 
-import androidx.lifecycle.LiveData
 import com.example.menuwithcleanachitecture.Domain.models.DishItem
 
 interface BasketDishsListRepository {
@@ -19,7 +18,7 @@ interface BasketDishsListRepository {
 
     //удаляет позицию полностью если количество любой позиции блюд стало =0
     //и вызывается метод обновления списка
-    suspend fun deliteDish(id: Int): DishItem?
+    suspend fun deleteDish(id: Int): DishItem?
 
     //добавляет новое блюдо в корзину
     suspend fun addDishToBasket(id: Int): DishItem
