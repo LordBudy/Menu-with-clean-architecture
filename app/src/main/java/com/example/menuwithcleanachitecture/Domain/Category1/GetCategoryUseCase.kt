@@ -1,11 +1,11 @@
 package com.example.menuwithcleanachitecture.Domain.Category1
 
-import com.example.menuwithcleanachitecture.Domain.models.CategoryDishItem
+import com.example.menuwithcleanachitecture.Domain.models.CategoryItem
 
-class GetCategoryUseCase(private val categoryListRepository: CategoryListRepository) {
+class GetCategoryUseCase(private val categoryRepository: CategoryListRepository) {
 
     //    выводит лист категории
-    fun getCategoryList(): List<CategoryDishItem> {
-        return categoryListRepository.getCategoryList()
+    suspend fun getCategoryList(): List<CategoryItem> {
+        return categoryRepository.getCategoryList()
     }
 }

@@ -1,4 +1,4 @@
-package com.example.menuwithcleanachitecture
+package com.example.menuwithcleanachitecture.Presentation
 
 import android.app.Application
 import androidx.room.Room
