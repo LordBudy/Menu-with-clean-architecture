@@ -4,7 +4,7 @@ import com.example.menuwithcleanachitecture.Domain.models.DishItem
 
 class DeliteDishUseCase(private val repository: BasketDishsListRepository) {
 
-    suspend fun execute(id: Int): DishItem? {
+    suspend fun delite(id: Int): DishItem? {
         return repository.deliteDish(id)
     }
 }
