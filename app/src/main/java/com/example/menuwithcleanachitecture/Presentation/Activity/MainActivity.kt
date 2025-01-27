@@ -1,4 +1,4 @@
-package com.example.menuwithcleanachitecture.Presentation
+package com.example.menuwithcleanachitecture.Presentation.Activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
