@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Menu with Clean Achitecture</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Basket_K_oplate">К оплате</string>
 </resources>

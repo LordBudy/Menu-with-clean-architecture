@@ -6,7 +6,7 @@ data class DishItem(
     val url_dish: String,
     val name_dish: String,
     val price_dish: String,
-    val countPrice: Int,
+    val countPrice: Double,
     val weight_dish: String,
     val quantity: Int
 

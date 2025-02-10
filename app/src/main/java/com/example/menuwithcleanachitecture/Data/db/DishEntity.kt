@@ -8,11 +8,9 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "dishes") //  таблица будет называться "dishs"
 data class DishEntity(
 
-    @PrimaryKey(autoGenerate = true)
-    var idAvto: Int? = null,
-
+    @PrimaryKey
     @ColumnInfo(name = "id_dish")
-    var id: Int?,
+    var id: Int,
 
     @ColumnInfo(name = "url")
     var url: String,
@@ -21,15 +19,15 @@ data class DishEntity(
     var name: String,
 
     @ColumnInfo(name = "price")
-    var price: Int,
+    var price: Double,
 
     @ColumnInfo(name = "countPrice")
-    var countPrice: Int,
+    var countPrice: Double,
 
     @ColumnInfo(name = "weight")
     var weight: String,
 
     @ColumnInfo(name = "quantity")
-    var quantity: Int
+    val quantity: Int
 
 )
