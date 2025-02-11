@@ -7,8 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.menuwithcleanachitecture.R
 
-
-class Basket : Fragment() {
+class Fast_search : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,10 +18,8 @@ class Basket : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(
-            R.layout.fragment_basket,
+            R.layout.fragment_fast_search,
             container, false
         )
     }
-
-
 }
