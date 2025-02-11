@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.androidx.room.common)
     kapt("androidx.room:room-compiler:2.6.1")
 
+    implementation("com.google.android.material:material:1.11.0")
+
     // Kotlin Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     // Hilt

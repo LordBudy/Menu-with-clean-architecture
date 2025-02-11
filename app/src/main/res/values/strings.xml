@@ -3,4 +3,14 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Basket_K_oplate">К оплате</string>
+    <string name="home">Home</string>
+    <string name="fast_search">Fast-search</string>
+    <string name="account">Account</string>
+    <string name="basket">Basket</string>
+    <string name="info_btn_nav">info_btn_nav</string>
+    <string name="info_account">info_account</string>
+    <string name="home2">Home</string>
+    <string name="menu">Menu</string>
+    <string name="menu_mini">Menu mini</string>
+    <string name="account2">Account</string>
 </resources>

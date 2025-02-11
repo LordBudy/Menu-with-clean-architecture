@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2">
 
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.menuwithcleanachitecture.Presentation.Fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.menuwithcleanachitecture.Presentation.Fragments.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_menu_mini"
+            app:destination="@id/menu_mini" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_mini"
+        android:name="com.example.menuwithcleanachitecture.Presentation.Fragments.Menu_mini"
+        android:label="fragment_menu_mini"
+        tools:layout="@layout/fragment_menu_mini" >
+        <action
+            android:id="@+id/action_menu_mini_to_basket"
+            app:destination="@id/basket" />
+    </fragment>
+    <fragment
+        android:id="@+id/basket"
+        android:name="com.example.menuwithcleanachitecture.Presentation.Fragments.Basket"
+        android:label="Basket" />
+    <fragment
+        android:id="@+id/fast_search"
+        android:name="com.example.menuwithcleanachitecture.Presentation.Fragments.Fast_search"
+        android:label="fragment_fast_search"
+        tools:layout="@layout/fragment_fast_search" />
+    <fragment
+        android:id="@+id/account"
+        android:name="com.example.menuwithcleanachitecture.Presentation.Fragments.Account"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
 </navigation>
