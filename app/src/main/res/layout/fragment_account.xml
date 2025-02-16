@@ -11,5 +11,5 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="@string/account"
-        android:textColor="#C71919" />
+        android:textColor="#D32F2F" />
 </FrameLayout>
