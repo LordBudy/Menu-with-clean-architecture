@@ -9,6 +9,7 @@
         android:id="@+id/account"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:text="@string/account"
-        android:gravity="center" />
+        android:textColor="#C71919" />
 </FrameLayout>
