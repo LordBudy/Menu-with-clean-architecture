@@ -7,6 +7,7 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
+        google()
         mavenCentral()
         gradlePluginPortal()
     }
@@ -20,5 +21,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Menu with Clean Achitecture"
-include(":app")
+include (":app")
  
